@@ -27,8 +27,14 @@ A estrutura do projeto segue o padrão MVC:
    git clone https://github.com/seu-usuario/seu-repositorio.git
    ```
 
-cd mvc
+   ```bash
+   cd mvc
+   ```
 
-npm install
+   ```bash
+   npm install
+   ```
 
-node src/app.js
+   ```bash
+   node src/app.js
+   ```
