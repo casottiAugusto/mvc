@@ -1,5 +1,5 @@
-const {Sequelize} = require('sequelize');
-require('dotenv').config();
+const { Sequelize } = require("sequelize");
+require("dotenv").config();
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,
@@ -9,14 +9,13 @@ const sequelize = new Sequelize(
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     dialect: process.env.DB_DIALECT,
-  }
+  },
 );
 try {
-   sequelize.authenticate();
-  console.log('Connection to the database has been established successfully.');
+  sequelize.authenticate();
+  console.log("Connection to the database has been established successfully.");
 } catch (error) {
-  console.error('Unable to connect to the database:', error);
-  
+  console.error("Unable to connect to the database:", error);
 }
 
 module.exports = sequelize;

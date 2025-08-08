@@ -1,5 +1,5 @@
 const { DataTypes } = require("sequelize");
-const db=require("../db/config");
+const db = require("../db/config");
 
 const Task = db.define("Task", {
   title: {
@@ -16,4 +16,3 @@ const Task = db.define("Task", {
   },
 });
 module.exports = Task;
-
