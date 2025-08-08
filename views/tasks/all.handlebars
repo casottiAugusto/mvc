@@ -1,1 +1,20 @@
 <h1>Todas as tasks cadastradas</h1>
+<ul class="task-list">
+  {{#each tasks}}
+    <li>{{this.title}} - {{#if this.done}}Concluída{{else}}Pendente{{/if}}
+
+    <span class="actions">
+      <a href="">
+        <i class="bi bi-check2"></i>
+      </a>
+      <a href="">
+        <i class="bi bi-pencil-square"></i>
+      </a>
+      <a href="">
+        <i class="bi bi-x-lg"></i>
+      </a>
+      </span>
+    </li>
+
+  {{/each}}
+</ul>
