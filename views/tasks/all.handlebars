@@ -9,11 +9,16 @@
         <a href="">
           <i class="bi bi-check2"></i>
         </a>
-        <a href="">
+        <a href="/tasks/edit/{{this.id}}">
           <i class="bi bi-pencil-square"></i>
         </a>
         <a href="">
-          <i class="bi bi-x-lg"></i>
+          <form action="/tasks/remove" method="post">
+            <input type="hidden" name="id" value="{{this.id}}" />
+            <button type="submit">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </form>
         </a>
       </span>
     </li>
