@@ -41,4 +41,13 @@ module.exports = class TaskController {
 
     res.render("tasks/all", { tasks });
   }
+  static async toggleTaskStatus(req, res) {
+    const id = req.body.id;
+    const task = {
+      done: req.body.done === "0" ? true : false,
+    };
+    console.log(task);
+    await Task.update(task, { where: { id: id } });
+    res.redirect("/tasks");
+  }
 };
